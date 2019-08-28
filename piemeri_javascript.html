@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+  Javascript piemēri
+  `var` nepietojam jaunajaa standaartaa, taa vietaa `const` un `let` !!!
+
+-->
+<html lang="lv-LV">
+  <head>
+    <title>Javascript piemēri</title>
+  </head>
+  <body>
+  <script type="text/javascript">
+  { // aiz script liek figūriekavas lai izveidotu atsevišķu koda  bloku. 
+  // document.write("Sveika pasaule!");
+
+// pirmie soļi, main;igodefinēšana
+  console.log("Sveika pasaule!");
+const a = 5; // ja nemainiisies veertiia, tas aizņem mazāk atmiņas, strādās ātrā nekā let
+let b = 3; // taa ddefineejam mainiigos jaunajaa Javascript
+let pazinojums;
+ 
+if (a !== b) {
+    pazinojums = `${a} nav vienāds ar ${b}`; // ${a} cits paņēmiens kā savienot tekstu ar mainīgajiem, rindas glos ir tildes simbols 
+} else {
+    pazinojums = a + " ir vienads ar " + b; // taa ir pa vecam 
+}
+console.log(pazinojums);
+
+// funkcijas un mainīgo redzamība, Javascript izpildīs arī ja funkcija kodā ir zem tās izsaukšanas
+console.log(summa (10,15)); // izvadiis 25 jo saskaitiis 10 un 15 
+
+let c=3;
+
+function summa(a,c) {
+return a+c;
+}
+
+// hipotenūza  no 2 katetēm
+function hipo(x,y){
+    return Math.sqrt(x*x+y*y);
+}
+console.log(hipo (4,3)); // aprēķina hipotenūzu
+
+// aprēķinam r.l. garumu ja zinaams raadiuss
+function rlg(r){
+    return Math.PI*r*2;
+}
+// raad=1; // fikseets raadiuss
+const raad=parseFloat(prompt('Ievadi rādiusu:')); // prasa ievadiit raadiusu logaa, parseInt veselie, Number saprot tikai ciparus
+console.log(`Riņķa līnijas garums ar rādiusu ${raad} ir ${rlg (raad).toFixed(2)}, ${rlg (raad).toFixed(4)}, ${rlg (raad).toFixed(7)}`); // r.l. garums noapaljots!!! liidz n cipariem aiz komata
+
+
+
+
+  }
+    </script>
+      
+  </body>
+</html>
