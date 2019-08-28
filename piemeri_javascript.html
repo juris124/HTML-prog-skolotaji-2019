@@ -50,13 +50,18 @@ console.log(h); // aprēķina hipotenūzu
 const ind=Number(prompt("Ievadi indeksu",0));
 const vertiba=Number(prompt("Ievadi masīva lielumu",0));
 
+let lielums=20;
+
+aizpildaMasivu(lielums);
+printMasivs();
+
 //console.log(mainitPecIndex(ind));
 
-//let vertiba=10;
-aizpildaMasivu(vertiba);
-printMasivs();
   }
     </script>
+    <button onClick="printMasivs()">
+      Poga
+    </button>
       
   </body>
 </html>
