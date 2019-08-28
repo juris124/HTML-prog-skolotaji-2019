@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <!--
-  Javascript piemēri ok
+  Javascript piemēri
   `var` nepietojam jaunajaa standaartaa, taa vietaa `const` un `let` !!!
 
 -->
 <html lang="lv-LV">
   <head>
     <title>Javascript piemēri</title>
-    <script src="./hipotenuza.js"></script>
+    <script src="./hipotenuza.js"></script> 
     <script src="./rinkaLinija.js"></script>
     <script src="./summa.js"></script>
+    <script src="./masivs.js"></script>
   </head>
   <body>
   <script type="text/javascript">
   { // aiz script liek figūriekavas lai izveidotu atsevišķu koda  bloku. 
   // document.write("Sveika pasaule!");
-
+// norādot ceļu var rakstīt arī bez punktiem, bet lielākos projektos tas nav ieteicams, tāpēc labāk rakstīt ./ - un tas nozīmē, ka fails ir tanī pašā mapē
 // pirmie soļi, main;igodefinēšana
   console.log("Sveika pasaule!");
 const a = 5; // ja nemainiisies veertiia, tas aizņem mazāk atmiņas, strādās ātrā nekā let
@@ -34,18 +35,26 @@ console.log(summa (10,15)); // izvadiis 25 jo saskaitiis 10 un 15
 
 let c=3;
 
-
-
 // hipotenūza  no 2 katetēm
 
-console.log(hipo (4,3)); // aprēķina hipotenūzu
+let h=hipo(4,3);
+console.log(h); // aprēķina hipotenūzu
 
 // aprēķinam r.l. garumu ja zinaams raadiuss
 
 // raad=1; // fikseets raadiuss
-const raad=parseFloat(prompt('Ievadi rādiusu:')); // prasa ievadiit raadiusu logaa, parseInt veselie, Number saprot tikai ciparus
-console.log(`Riņķa līnijas garums ar rādiusu ${raad} ir ${rlg (raad).toFixed(2)}, ${rlg (raad).toFixed(4)}, ${rlg (raad).toFixed(7)}`); // r.l. garums noapaljots!!! liidz n cipariem aiz komata
+//const raad=parseFloat(prompt('Ievadi rādiusu:')); // prasa ievadiit raadiusu logaa, parseInt veselie, Number saprot tikai ciparus
+//console.log(`Riņķa līnijas garums ar rādiusu ${raad} ir ${rlg (raad).toFixed(2)}, ${rlg (raad).toFixed(4)}, ${rlg (raad).toFixed(7)}`); // r.l. garums noapaljots!!! liidz n cipariem aiz komata
 
+
+const ind=Number(prompt("Ievadi indeksu",0));
+const vertiba=Number(prompt("Ievadi masīva lielumu",0));
+
+//console.log(mainitPecIndex(ind));
+
+//let vertiba=10;
+aizpildaMasivu(vertiba);
+printMasivs();
   }
     </script>
       
